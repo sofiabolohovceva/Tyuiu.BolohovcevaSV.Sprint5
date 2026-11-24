@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.BolohovcevaSV.Sprint5.Task0.V25.Lib
@@ -7,7 +8,7 @@ namespace Tyuiu.BolohovcevaSV.Sprint5.Task0.V25.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $"{Directory.GetCurrentDirectory()}\\OutPutFileTask0.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
 
             double y = (3 * Math.Pow(x, 4) + 1) / Math.Pow(x, 3);
 
